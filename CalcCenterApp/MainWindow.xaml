@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Margin="152,57,152,56">
+        <Button Margin="10,10,675,375"
+                RenderTransformOrigin="0.494,0.514">
             <StackPanel />
 
         </Button>
+        <Grid HorizontalAlignment="Left" />
 
     </Grid>
 </Window>
