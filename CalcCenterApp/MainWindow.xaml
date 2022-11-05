@@ -11,12 +11,5 @@
                 RenderTransformOrigin="0.494,0.514">
             <StackPanel />
 
-        </Button>
-        <Grid HorizontalAlignment="Left" />
-        <Button Content="Button"
-                HorizontalAlignment="Left"
-                Margin="182,169,0,0"
-                VerticalAlignment="Top" />
 
-    </Grid>
 </Window>
