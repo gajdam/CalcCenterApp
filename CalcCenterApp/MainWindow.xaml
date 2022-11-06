@@ -3,13 +3,75 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CalcCenterApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Margin="10,10,675,375"
-                RenderTransformOrigin="0.494,0.514">
-            <StackPanel />
-
-
+        Title="MainWindow"
+        Height="450"
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Border CornerRadius="20"
+            Padding="2"
+            BorderThickness="1"
+            Opacity="0.95">
+        <Border.Background>
+            <ImageBrush Stretch="UniformToFill"
+                        ImageSource="/pngtree-simple-white-flat-vectors-with-diagonal-cuts-decorative-backdrops-for-your-image_597614.png" />
+        </Border.Background>
+        <Grid HorizontalAlignment="Left"
+              Width="117">
+            <Border CornerRadius="20,0,0,20"
+                    BorderThickness="2,2,2,2">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="#FF4C4DA9" />
+                        <GradientStop Color="#FF020237"
+                                      Offset="1" />
+                        <GradientStop Color="#FF7E7EC7"
+                                      Offset="0.541" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2"
+                                      BlurRadius="30"
+                                      Opacity="0.7" />
+                </Border.Effect>
+                <Button Content="Calculator"
+                        Margin="0,49,0,343"
+                        Background="#FF6464BB"
+                        Foreground="#FFFDF1F1"
+                        FontFamily="Britannic Bold"
+                        Click="Button_Click" />
+            </Border>
+            <Border CornerRadius="0,20,0,0"
+                    BorderThickness="2,2,2,2"
+                    Margin="113,0,-676,391">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1"
+                                         StartPoint="0.5,0">
+                        <GradientStop Color="#FFCDDEE6"
+                                      Offset="1" />
+                        <GradientStop Color="#FF95D9FB"
+                                      Offset="0.204" />
+                        <GradientStop Color="#FF54A0C5"
+                                      Offset="0.006" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="2"
+                                      BlurRadius="30"
+                                      Opacity="0.7" />
+                </Border.Effect>
+            </Border>
+            <Grid Margin="122,58,-676,0">
+                <Frame x:Name="Main"
+                       Margin="10,10,10,10"
+                       Padding="-1,0,0,0">
+                </Frame>
+            </Grid>
+        </Grid>
+    </Border>
 </Window>
