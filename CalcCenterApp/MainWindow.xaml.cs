@@ -35,5 +35,9 @@ namespace CalcCenterApp
             CalcTempWindow CalcTempWindow = new CalcTempWindow();        
             CalcTempWindow.Show();
         }
+        private void PrintHello()
+        {
+            
+        }
     }
 }
