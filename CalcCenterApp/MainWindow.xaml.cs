@@ -29,5 +29,9 @@ namespace CalcCenterApp
         {
             Main.Content =new Page2();
         }
+        private void PrintHello()
+        {
+            
+        }
     }
 }
