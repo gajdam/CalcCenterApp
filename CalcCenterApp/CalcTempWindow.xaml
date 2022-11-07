@@ -5,60 +5,111 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CalcCenterApp"
         mc:Ignorable="d"
-        Title="CalcTempWindow" Height="450" Width="800">
-    <Grid>
+        Title="CalcTempWindow"
+        Height="450"
+        Width="800"
+        Background="Transparent">
+    <Grid Margin="17,-2,-17,1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*" />
+            <RowDefinition Height="76*" />
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Left"
+                   Height="141"
+                   Margin="193,60,0,0"
+                   Stroke="Black"
+                   VerticalAlignment="Top"
+                   Width="392"
+                   Grid.Row="1">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1"
+                                     StartPoint="0.5,0">
+                    <GradientStop Color="White"
+                                  Offset="0" />
+                    <GradientStop Color="#FF6456AB"
+                                  Offset="1" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
         <RadioButton x:Name="cel1"
                      GroupName="pierwsze"
                      Content="Stopnie Celsjusza"
                      HorizontalAlignment="Left"
-                     Margin="161,127,0,0"
+                     Margin="206,82,0,0"
                      VerticalAlignment="Top"
-                     Checked="cel1_Checked"/>
+                     Checked="cel1_Checked"
+                     Grid.Row="1" 
+                     IsChecked="True"/>
         <RadioButton x:Name="faren1"
                      GroupName="pierwsze"
                      Content="Stopnie Farenheita"
                      HorizontalAlignment="Left"
-                     Margin="161,170,0,0"
-                     VerticalAlignment="Top" />
+                     Margin="206,125,0,0"
+                     VerticalAlignment="Top"
+                     Grid.Row="1" />
         <RadioButton x:Name="kel1"
                      GroupName="pierwsze"
                      Content="Stopnie Kelwina"
                      HorizontalAlignment="Left"
-                     Margin="161,0,0,0"
-                     VerticalAlignment="Center" />
+                     Margin="206,165,0,0"
+                     VerticalAlignment="Top"
+                     Grid.Row="1" />
 
         <RadioButton x:Name="cel2"
                      GroupName="drugie"
                      Content="Stopnie Celsjusza"
                      HorizontalAlignment="Left"
-                     Margin="490,134,0,0"
-                     VerticalAlignment="Top" />
+                     Margin="450,81,0,0"
+                     VerticalAlignment="Top"
+                     Checked="cel1_Checked"
+                     Height="17"
+                     Grid.Row="1" />
         <RadioButton x:Name="faren2"
                      GroupName="drugie"
                      Content="Stopnie Farenheita"
                      HorizontalAlignment="Left"
-                     Margin="490,170,0,0"
-                     VerticalAlignment="Top" />
+                     Margin="450,124,0,0"
+                     VerticalAlignment="Top"
+                     Height="16"
+                     Width="119"
+                     Grid.Row="1" 
+                     IsChecked="True"/>
         <RadioButton x:Name="kel2"
                      GroupName="drugie"
                      Content="Stopnie Kelwina"
                      HorizontalAlignment="Left"
-                     Margin="490,0,0,0"
-                     VerticalAlignment="Center" />
+                     Margin="450,163,0,0"
+                     VerticalAlignment="Top"
+                     Height="17"
+                     Grid.Row="1" />
         <TextBox x:Name="dataTemp"
                  HorizontalAlignment="Left"
-                 Margin="331,289,0,0"
+                 Margin="333,122,0,0"
                  TextWrapping="Wrap"
                  Text="&#xD;&#xA;"
                  VerticalAlignment="Top"
-                 Width="120"
-                 Height="20" 
-                 TextChanged="dataTemp_TextChanged"/>
+                 Width="45"
+                 Height="20"
+                 TextChanged="dataTemp_TextChanged"
+                 Grid.Row="1"
+                 Background="#FFAEA6D3"
+                 BorderBrush="White" />
         <Label x:Name="scoreTemp"
-               Content="Label"
+               Content=""
                HorizontalAlignment="Left"
-               Margin="331,338,0,0"
+               Margin="400,119,0,0"
                VerticalAlignment="Top"
-               Width="120" />
+               Width="38"
+               Grid.Row="1" />
+        <TextBlock HorizontalAlignment="Left"
+                   Margin="383,120,0,0"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Width="20"
+                   FontWeight="Bold"
+                   FontSize="15"
+                   Grid.Row="1"
+                   Foreground="White"><Run Language="pl-pl"
+                                     Text="=" /></TextBlock>
     </Grid>
 </Window>

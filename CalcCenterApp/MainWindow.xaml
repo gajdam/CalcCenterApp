@@ -68,16 +68,26 @@
                                       Opacity="0.7" />
                 </Border.Effect>
             </Border>
-            <Grid Margin="122,58,-676,0">
-                <Frame x:Name="Main"
-                       Margin="10,10,10,10"
-                       Padding="-1,0,0,0">
-                </Frame>
-            </Grid>
+            <Grid Margin="122,58,-676,0" />
             <Border BorderBrush="Black"
-                    BorderThickness="1" />
+                    BorderThickness="1">
+                <Button Content="Histry"
+                        HorizontalAlignment="Center"
+                        Height="48"
+                        Margin="0,146,0,0"
+                        VerticalAlignment="Top"
+                        Width="113"
+                        Background="#FF6464BB"
+                        Foreground="#FFFDF1F1"
+                        FontFamily="Britannic Bold">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FFE6E6E6"
+                                         Opacity="0.4" />
+                    </Button.BorderBrush>
+                </Button>
+            </Border>
             <Button x:Name="SimpleCalc_Button"
-                    Content="Button"
+                    Content="SimpleCalculator"
                     HorizontalAlignment="Center"
                     Margin="0,99,0,0"
                     Background="#FF6464BB"
