@@ -166,7 +166,7 @@
                 Background="#FF1AB50D"
                 Foreground="#FFFDFDFD" Click="EqualsButtonClick" />
         <Button x:Name="ButtonDec"
-                Content="."
+                Content=","
                 HorizontalAlignment="Left"
                 Margin="79,292,0,0"
                 VerticalAlignment="Top"

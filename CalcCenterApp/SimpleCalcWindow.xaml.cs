@@ -30,25 +30,25 @@ namespace CalcCenterApp
         {
             if (TextDisplay.Text == "0" && operation == "")
             {
-                firstNumberStr += "0.";
+                firstNumberStr += "0,";
                 hasUsedDotForDecimal = true;
                 TextDisplay.Text = firstNumberStr;
             }
             else if (TextDisplay.Text == "0" && operation != "")
             {
-                secondNumberStr += "0.";
+                secondNumberStr += "0,";
                 hasUsedDotForDecimal = true;
                 TextDisplay.Text = secondNumberStr;
             }
             else if (operation == "" && firstNumberStr.Length <= 9 && hasUsedDotForDecimal == false)
             {
-                firstNumberStr += '.';
+                firstNumberStr += ',';
                 hasUsedDotForDecimal = true;
                 TextDisplay.Text = firstNumberStr;
             }
             else if (operation != "" && secondNumberStr.Length <= 9 && hasUsedDotForDecimal == false)
             {
-                secondNumberStr += '.';
+                secondNumberStr += ',';
                 hasUsedDotForDecimal = true;
                 TextDisplay.Text = secondNumberStr;
             }
@@ -56,22 +56,22 @@ namespace CalcCenterApp
 
         private void NegPosButtonClick(object sender, RoutedEventArgs e)
         {
-            if(operation == "" && firstNumberStr[0] == '-')
+            if(firstNumberStr != "" && operation == "" && firstNumberStr[0] == '-')
             {
                 firstNumberStr = firstNumberStr.Substring(1);
                 TextDisplay.Text = firstNumberStr;
             }
-            else if(operation != "" && secondNumberStr[0] == '-')
+            else if(secondNumberStr != "" && operation != "" && secondNumberStr[0] == '-')
             {
                 secondNumberStr = secondNumberStr.Substring(1);
                 TextDisplay.Text = secondNumberStr;
             }
-            else if(operation == "" && firstNumberStr[0] != '-')
+            else if(firstNumberStr != "" && operation == "" && firstNumberStr[0] != '-')
             {
                 firstNumberStr = "-" + firstNumberStr;
                 TextDisplay.Text = firstNumberStr;
             }
-            else if (operation != "" && secondNumberStr[0] != '-')
+            else if (secondNumberStr != "" && operation != "" && secondNumberStr[0] != '-')
             {
                 secondNumberStr = "-" + secondNumberStr;
                 TextDisplay.Text = secondNumberStr;
@@ -135,7 +135,7 @@ namespace CalcCenterApp
                         break;
 
                     case "*":
-                        TextDisplay.Text = (firstNumber - secondNumber).ToString();
+                        TextDisplay.Text = (firstNumber * secondNumber).ToString();
                         break;
 
                     case "/":
@@ -158,6 +158,8 @@ namespace CalcCenterApp
         private void ClearButtonClick(object sender, RoutedEventArgs e)
         {
             TextDisplay.Text = "0";
+            BackTextDisplay.Text = "";
+            previousEquation = "";
             firstNumberStr = "";
             secondNumberStr = "";
             operation = "";
@@ -188,7 +190,7 @@ namespace CalcCenterApp
                 secondNumberStrNoMoreSpace = true;
             else
                 secondNumberStrNoMoreSpace = false;
-            if(previousEquation != "")
+            if(previousEquation != "" && operation == "")
             {
                 BackTextDisplay.Text = previousEquation;
             }
