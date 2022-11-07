@@ -10,17 +10,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace temperatura3
+namespace CalcCenterApp
 {
     /// <summary>
-    /// Interaction logic for Page2.xaml
+    /// Interaction logic for CalcTempWindow.xaml
     /// </summary>
-    public partial class Page2 
+    public partial class CalcTempWindow : Window
     {
-        private RoutedEventHandler cel1_Checked;
+        public CalcTempWindow()
+        {
+            InitializeComponent();
+        }
+        private void cel1_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void dataTemp_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -109,4 +115,3 @@ namespace temperatura3
         }
     }
 }
-

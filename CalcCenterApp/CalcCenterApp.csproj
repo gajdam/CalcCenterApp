@@ -8,19 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="png-transparent-capybara-great-american-interchange-animal-neotropical-realm-isthmus-of-panama-others-mammal-sheep-fauna.png" />
-    <None Remove="pngtree-simple-white-flat-vectors-with-diagonal-cuts-decorative-backdrops-for-your-image_597614.png" />
-    <None Remove="white-cube-pattern-4k-bu.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="png-transparent-capybara-great-american-interchange-animal-neotropical-realm-isthmus-of-panama-others-mammal-sheep-fauna.png" />
-    <Resource Include="pngtree-simple-white-flat-vectors-with-diagonal-cuts-decorative-backdrops-for-your-image_597614.png" />
-    <Resource Include="white-cube-pattern-4k-bu.png" />
   </ItemGroup>
 
 </Project>

@@ -10,16 +10,12 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="Transparent"
+        Background="#ffffff"
         AllowsTransparency="True">
     <Border CornerRadius="20"
             Padding="2"
             BorderThickness="1"
             Opacity="0.95">
-        <Border.Background>
-            <ImageBrush Stretch="UniformToFill"
-                        ImageSource="/pngtree-simple-white-flat-vectors-with-diagonal-cuts-decorative-backdrops-for-your-image_597614.png" />
-        </Border.Background>
         <Grid HorizontalAlignment="Left"
               Width="117">
             <Border CornerRadius="20,0,0,20"
@@ -44,7 +40,7 @@
                         Background="#FF6464BB"
                         Foreground="#FFFDF1F1"
                         FontFamily="Britannic Bold"
-                        Click="Button_Click" />
+                        Click="Calculator" />
             </Border>
             <Border CornerRadius="0,20,0,0"
                     BorderThickness="2,2,2,2"
