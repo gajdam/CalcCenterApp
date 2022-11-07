@@ -23,10 +23,16 @@ namespace CalcCenterApp
         public MainWindow()
         {
             InitializeComponent();
-        }
-        private void Calculator(object sender, RoutedEventArgs e)
+        }  
+        private void SimpleCalc_onClick(object sender, RoutedEventArgs e)
         {
-            CalcTempWindow CalcTempWindow = new CalcTempWindow();
+            SimpleCalcWindow SimpleCalcWindow = new SimpleCalcWindow();
+            SimpleCalcWindow.Show();
+        }
+
+        private void TempCalculator_onClick(object sender, RoutedEventArgs e)
+        {
+            CalcTempWindow CalcTempWindow = new CalcTempWindow();        
             CalcTempWindow.Show();
         }
     }
